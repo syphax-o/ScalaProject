@@ -1,0 +1,144 @@
+openapi: 3.0.3
+info:
+  title: Trivia Questions - OpenAPI 3.0
+  description: |-
+    
+    Welcome to the API documentation for our Questions Generator API, built with Scala and Akka HTTP. 
+    
+    This API provides a powerful and flexible platform for generating a variety of questions for diverse applications such as quizzes, surveys, and educational content. 
+    
+    To utilize the API, simply make HTTP requests with specific parameters to customize the generated questions based on your requirements.
+    
+    The API supports a range of question types, including multiple-choice, true/false
+    
+    Additionally, it allows you to specify difficulty levels, topic categories, and the desired number of questions per request. The responses are returned in a standardized JSON format, making integration seamless and straightforward.
+  version: 1.0.11
+servers:
+  - url: http://localhost:3001/api
+tags:
+  - name: questions
+    description: Get questions using another API :)
+  - name: questions (server)
+    description: Create and get questions using our services
+paths:
+  /questions:
+    get:
+      tags:
+        - questions
+      summary: Get questions with params
+      description: Returns a list of questions
+      operationId: getQuestions
+      parameters:
+        - name: amount
+          in: query
+          description: Amount of returned questions
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 50
+          required: true
+        - name: category
+          in: query
+          description: Category of the questions
+          schema:
+            type: integer
+            minimum: 9
+            maximum: 32
+          required: true
+        - name: difficulty
+          in: query
+          description: Difficulty of returned questions
+          schema:
+            type: string
+            enum:
+              - easy
+              - medium
+              - hard
+          required: true
+        - name: type
+          in: query
+          description: Type of returned questions
+          schema:
+            type: string
+            enum:
+              - multiple
+              - boolean
+          required: true
+      responses:
+        '200':
+          description: OK (successful operation)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Questions'
+        '400':
+          description: The request contains bad syntax or cannot be fulfilled.
+  /questions/db:
+    get:
+      tags:
+        - questions (server)
+      summary: Get questions from database
+      description: Returns a list of questions from the database
+      operationId: getQuestionsDB
+      responses:
+        '200':
+          description: OK (successful operation)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Questions'
+    post:
+      tags:
+        - questions (server)
+      summary: Create a new question, then store it in the database
+      description: Creates and returns a new question
+      operationId: createQuestionDB
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Question'
+      responses:
+        '200':
+          description: OK (successful operation)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Questions'
+components:
+  schemas:
+    Question:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - multiple
+            - boolean
+        difficulty:
+          type: string
+          enum:
+            - easy
+            - hard
+            - medium
+        category:
+          type: string
+          example: 'Art'
+        question:
+          type: string
+          example: 'This is a question'
+        correct_answer:
+          type: string
+          example: 'Correct answer'
+        incorrect_answers:
+          type: array
+          items:
+            type: string
+    Questions:
+      type: object
+      properties:
+        questions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Question'

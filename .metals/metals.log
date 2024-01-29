@@ -1,0 +1,41 @@
+2024.01.28 21:55:06 INFO  Started: Metals version 1.2.0 in folders '/home/syphax/scala/trivia-pekko' for client Visual Studio Code 1.85.2.
+2024.01.28 21:55:07 WARN  Build server is not auto-connectable.
+2024.01.28 21:55:09 INFO  running '/usr/lib/jvm/java-17-openjdk-amd64/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals973295238502450676/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.01.28 21:55:10 WARN  no build target for: /home/syphax/scala/trivia-pekko/project/metals.sbt
+2024.01.28 21:55:10 INFO  skipping build import with status 'Started'
+2024.01.28 21:55:11 INFO  [info] welcome to sbt 1.9.7 (Private Build Java 17.0.9)
+2024.01.28 21:55:14 INFO  [info] loading settings for project trivia-pekko-build-build from metals.sbt ...
+2024.01.28 21:55:14 INFO  no build target found for /home/syphax/scala/trivia-pekko/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.28 21:55:14 INFO  [info] loading project definition from /home/syphax/scala/trivia-pekko/project/project
+2024.01.28 21:55:17 INFO  [info] loading settings for project trivia-pekko-build from metals.sbt ...
+2024.01.28 21:55:17 INFO  [info] loading project definition from /home/syphax/scala/trivia-pekko/project
+2024.01.28 21:55:19 INFO  [success] Generated .bloop/trivia-pekko-build.json
+2024.01.28 21:55:19 INFO  [success] Total time: 2 s, completed Jan 28, 2024, 9:55:19 PM
+2024.01.28 21:55:20 INFO  [info] loading settings for project root from build.sbt ...
+2024.01.28 21:55:20 INFO  [info] set current project to PMR_Trivia (in build file:/home/syphax/scala/trivia-pekko/)
+2024.01.28 21:55:20 INFO  [success] Generated .bloop/root.json
+2024.01.28 21:55:20 INFO  [success] Generated .bloop/root-test.json
+2024.01.28 21:55:20 INFO  [success] Total time: 0 s, completed Jan 28, 2024, 9:55:21 PM
+2024.01.28 21:55:21 INFO  time: ran 'sbt bloopInstall' in 11s
+2024.01.28 21:55:21 INFO  Attempting to connect to the build server...
+2024.01.28 21:55:21 INFO  Bloop uses /usr/lib/jvm/java-17-openjdk-amd64 defined at /home/syphax/.bloop/bloop.json
+2024.01.28 21:55:23 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/syphax/scala/trivia-pekko/.metals/bsp.trace.json or /home/syphax/.cache/metals/bsp.trace.json
+2024.01.28 21:55:23 INFO  Attempting to connect to the build server...
+2024.01.28 21:55:23 INFO  Bloop uses /usr/lib/jvm/java-17-openjdk-amd64 defined at /home/syphax/.bloop/bloop.json
+2024.01.28 21:55:23 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/syphax/scala/trivia-pekko/project/.metals/bsp.trace.json or /home/syphax/.cache/metals/bsp.trace.json
+2024.01.28 21:55:23 INFO  time: Connected to build server in 2.05s
+2024.01.28 21:55:23 INFO  Connected to Build server: Bloop v1.5.13
+2024.01.28 21:55:23 INFO  time: Imported build in 0.11s
+2024.01.28 21:55:25 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/lib/src.zip. Java symbols will not be available.
+2024.01.28 21:55:29 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/lib/src.zip. Java symbols will not be available.
+2024.01.28 21:55:29 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/lib/src.zip. Java symbols will not be available.
+2024.01.28 21:55:29 INFO  time: indexed workspace in 5.41s
+2024.01.28 21:55:29 INFO  compiling root (15 scala sources)
+2024.01.28 21:55:40 WARN  2 feature warnings; re-run with -feature for details
+2024.01.28 21:55:40 INFO  time: compiled root in 11s
+2024.01.28 21:55:40 INFO  Deduplicating compilation of root from bsp client 'Metals 1.2.0' (since 17.901s)
+2024.01.28 21:55:45 INFO  Shutting down server
+2024.01.28 21:55:45 INFO  shutting down Metals
+2024.01.28 21:55:45 INFO  Shut down connection with build server.
+2024.01.28 21:55:45 INFO  Shut down connection with build server.
+2024.01.28 21:55:45 INFO  Exiting server
